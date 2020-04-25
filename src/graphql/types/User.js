@@ -4,6 +4,7 @@ export default `
         username: String!
         email: String!
         password: String!
+        recipes: [Recipe]
     }
     type Query {
         user(_id: String!): User
@@ -12,6 +13,6 @@ export default `
     type Mutation {
         addUser(username: String!, email: String!, password: String!): User
         deleteUser(_id: String!): User
-        editUser(_id: String!, username: String, email: String, password: String): User
+        editUser(_id: String!, username: String, email: String, password: String, recipes: [RecipeInput]): User
     }
 `

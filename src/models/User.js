@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Recipe from "./Recipe";
 
 const Schema = mongoose.Schema;
 
@@ -14,6 +15,9 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    recipes: {
+        type: [Recipe.schema]
     }
 })
 
