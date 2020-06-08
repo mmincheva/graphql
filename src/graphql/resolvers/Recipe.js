@@ -10,7 +10,7 @@ export default {
                 })
             })
         },
-        recipe: () => {
+        recipes: () => {
             return new Promise((resolve, reject) => {
                 Recipe.find({}).populate().exec((error, response) => {
                     error ? reject(error) : resolve(response);

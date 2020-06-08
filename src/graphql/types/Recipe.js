@@ -1,4 +1,12 @@
 export default `
+
+    input RecipeInput {
+        _id: String!
+        name: String!
+        description: String!
+        imageUrl: String!
+        time: Float!
+}
     type Recipe {
         _id: String!
         name: String!
